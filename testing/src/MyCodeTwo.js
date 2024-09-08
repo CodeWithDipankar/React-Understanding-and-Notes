@@ -1,6 +1,6 @@
 function MyCode(){
 return (
-    <h2>I am cow</h2>
+    <h2>I am Hero</h2>
 
 );
 }
