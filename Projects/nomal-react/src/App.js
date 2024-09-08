@@ -11,9 +11,9 @@ export default function App() {
   const AddValue = () => {
     counter = counter+1
     status = ""
-    setStatus(setStatus)
+    setStatus(status)
     setCounter(counter)
-    console.log("Dipankar's rank is : ",counter,"|",Math.random())
+    console.log("Dipankar's rank is : ",counter)
   }
 
   const Reset = () =>{
@@ -32,11 +32,17 @@ export default function App() {
   }
 
   const DecreaseValue = () => {
-    counter = counter - 1
-    setCounter(counter)
-    console.log("The rank is decreased to: ",{counter})
+    if (counter >0){
+      counter = counter - 1
+      setCounter(counter)
+      console.log("The rank is decreased to: ",{counter})
+    }
+    else{
+      status = "The rank is already 0 can not decrease the value more."
+      setStatus(status)
+      console.log("The rank is already 0 can not decrease the value more.")
+    }
   }
-
 
   return (
     // <> //This is fragment tag used when we are not using div tag as right now we are using div we can avoid so commented.
