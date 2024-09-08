@@ -1,9 +1,8 @@
 import { useState } from "react"
 import './App.css';
 
-
-
-export default function App() {
+export default function App()
+{
 
   let [counter, setCounter] = useState(0)
   let [status, setStatus] = useState("")
