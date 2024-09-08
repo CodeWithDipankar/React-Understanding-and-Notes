@@ -16,7 +16,7 @@ export default function App() {
     console.log("Dipankar's rank is : ",counter,"|",Math.random())
   }
 
-  const RemoveValue = () =>{
+  const Reset = () =>{
     if (counter > 0)
     {
       counter = 0
@@ -31,18 +31,24 @@ export default function App() {
 
   }
 
+  const DecreaseValue = () => {
+    counter = counter - 1
+    setCounter(counter)
+    console.log("The rank is decreased to: ",{counter})
+  }
+
+
   return (
-    <>
-      <div className="App">
+    // <> //This is fragment tag used when we are not using div tag as right now we are using div we can avoid so commented.
+      <div className="mybody">
         <h1 style={{color:"green", fontFamily:"cursive"}}>Hi, I am Dipankar Mandal and my rank is : {counter}</h1>
         <h1 style={{color:"red", fontFamily:"cursive"}}>{status}</h1>
-        <button onClick={AddValue}>AddValue {counter} </button>
+        <button class = "btn" onClick={AddValue}>Add </button>
+        <button class = "btn" onClick={DecreaseValue}>Decrease </button>
         <br/>
-        <br/>
-        <br/>
-        <button onClick={RemoveValue}>RemoveValue</button>
-      </div >
 
-    </>
+        <button class = "btn" onClick={Reset}>Reset </button>
+      </div >
+    // </>
   );
 }
