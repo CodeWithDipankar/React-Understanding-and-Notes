@@ -8,9 +8,10 @@ function App() {
       <header class= "header">
         <nav class= "nav">
           <ul>
-            <li><Link to="/">Profile</Link></li>
-            <li><Link to="/about">About Me</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/">Porfolio</Link></li>
+            <li><Link to="/">Projects</Link></li>
+            <li><Link to="/">Contacts</Link></li>
           </ul>
 
         </nav>
